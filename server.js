@@ -13,7 +13,7 @@ mongoose.connect("mongodb+srv://notedb:sidmongo@cluster0.jrtkr.mongodb.net/paste
 
 const { PORT=3000, LOCAL_ADDRESS='0.0.0.0' } = process.env
 app.listen(PORT, LOCAL_ADDRESS, () => {
-  const address = server.address();
+  const address = app.address();
   console.log('server listening at', address);
 });
 
