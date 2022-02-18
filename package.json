@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "devStart": "node server.js"
+    
+   
   },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -15,6 +18,8 @@
     "mongoose": "^5.13.3"
   },
   "devDependencies": {
+    "concurrently": "^7.0.0",
+    "http-server": "^14.1.0",
     "nodemon": "^2.0.12"
   }
 }
