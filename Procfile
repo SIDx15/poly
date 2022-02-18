@@ -1,1 +1,1 @@
-web :nodemon server.js
+worker:npm start
