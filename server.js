@@ -11,10 +11,8 @@ mongoose.connect("mongodb+srv://notedb:sidmongo@cluster0.jrtkr.mongodb.net/paste
   useNewUrlParser: true,
 })
 
-const { PORT=3000, LOCAL_ADDRESS='0.0.0.0' } = process.env
-app.listen(PORT, LOCAL_ADDRESS, () => {
-  const address = app.address();
-  console.log('server listening at', address);
+app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
+  console.log("Server is running.");
 });
 
 app.get("/", async(req, res) => {
