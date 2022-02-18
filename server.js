@@ -11,8 +11,11 @@ mongoose.connect("mongodb+srv://notedb:sidmongo@cluster0.jrtkr.mongodb.net/paste
   useNewUrlParser: true,
 })
 
-
-app.listen(process.env.PORT || 3000)
+const { PORT=3000, LOCAL_ADDRESS='0.0.0.0' } = process.env
+app.listen(PORT, LOCAL_ADDRESS, () => {
+  const address = server.address();
+  console.log('server listening at', address);
+});
 
 app.get("/", async(req, res) => {
   const code = `Welcome!!
