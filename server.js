@@ -11,9 +11,9 @@ mongoose.connect("mongodb+srv://notedb:sidmongo@cluster0.jrtkr.mongodb.net/paste
   useNewUrlParser: true,
 })
 
-app.listen(process.env.PORT || 3000, function(){
-  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-});
+var port = process.env.PORT || 3000;
+
+app.listen(port);
 
 app.get("/", async(req, res) => {
   const code = `Welcome!!
